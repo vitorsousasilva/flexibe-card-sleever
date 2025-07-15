@@ -1,0 +1,109 @@
+<Defaults>
+  <Text
+    navigation="None"
+    color="#E9E8E7"
+    resizeTextForBestFit="true"
+    resizeTextMaxSize="1000"
+  />
+  <Text
+    class="operator-txt"
+    color="#b0b0b0"
+    height="52"
+    width="999"
+    scale="0.5 0.5 0.5"
+  />
+  <Text
+    class="radio-txt"
+    textAlignment="UpperLeft"
+    height="30"
+    width="999"
+    scale="0.5 0.5 0.5"
+  />
+  <Text
+    class="deck-place"
+    color="#b9b1cd"
+    height="19"
+    width="999"
+    scale="0.5 0.5 0.5"
+  />
+  <InputField
+    hoverClass="input_hover"
+    lineType="SingleLine"
+    navigation="None"
+    placeholder=" "
+    textAlignment="MiddleLeft"
+  />
+  <Toggle
+    navigation="None"
+    textColor="#E9E8E7"
+    resizeTextForBestFit="true"
+    resizeTextMaxSize="1000"
+    toggleWidth="11"
+    toggleHeight="11"
+  />
+  <Button
+    navigation="None"
+    colors="#8c3131|#bf4343|#220000|rgba(0.78,0.78,0.78,0.5)"
+    textColor="#E9E8E7"
+    textOutline="#121212"
+    textAlignment="MiddleCenter"
+    resizeTextForBestFit="true"
+    resizeTextMaxSize="1000"
+  />
+  <!-- colors="#4d3131|#664141|#220000|rgba(0.78,0.78,0.78,0.5)" -->
+  <!-- colors="#39314d|#4c4166|#220022|rgba(0.78,0.78,0.78,0.5)" -->
+  <Button
+    class="sleeve-it-btn"
+    height="55"
+    width="75"
+    scale="0.5 0.5 0.5"
+  />
+  <Button
+    class="mirror-it-btn"
+    height="60"
+    width="60"
+    scale="0.5 0.5 0.5"
+  />
+</Defaults>
+
+<!--<Panel id="uiFlexibleCardSleeverPanel" position="185 -130 -10" rotation="180 180 0" width="500" height="400" active="true"></Panel>-->
+<Panel rotation="0 0 180" position="0 0 -7">
+
+  <Text class="deck-place" offsetXY="-141.8 31.5">Place Deck</Text>
+  <Text class="deck-place" offsetXY="-141.8 22.5">Here</Text>
+  <Text class="deck-place" offsetXY="0 101">Sleeve</Text>
+
+  <Text class="operator-txt" offsetXY="-87 40">+</Text>
+  <Text class="operator-txt" offsetXY="-87 -40">+</Text>
+  <Text class="operator-txt" offsetXY="87 75">=</Text>
+  <Text class="operator-txt" offsetXY="87 -75">=</Text>
+
+  <Button class="mirror-it-btn" offsetXY="-157 -90" onClick="onUiMirrorBackToFrontButtonClick">Copy each card back to its front</Button>
+  <Button class="mirror-it-btn" offsetXY="-127 -90" onClick="onUiMirrorFrontToBackButtonClick">Copy each card front to its back</Button>
+
+  <Button class="sleeve-it-btn" offsetXY="87 97" onClick="onUiSleeveCopyGoButtonClick">Sleeve it!</Button>
+  <Button class="sleeve-it-btn" offsetXY="87 -53" onClick="onUiSleeveUrlGoButtonClick">Sleeve it!</Button>
+
+  <Text offsetXY="-40 26" class="radio-txt">Use:</Text>
+  <Text offsetXY="21 25" class="radio-txt">Card back</Text>
+  <Text offsetXY="20 7" class="radio-txt">Card front</Text>
+  <Text offsetXY="52.7 -11" class="radio-txt">Whichever side is up</Text>
+  <ToggleGroup>
+    <Toggle offsetXY="-18 25" id="uiSleeveModeToggleBack" onClick="onUiSleeveModeToggleBackClick" isOn="true"/>
+    <Toggle offsetXY="-18 7" id="uiSleeveModeToggleFront" onClick="onUiSleeveModeToggleFrontClick"/>
+    <Toggle offsetXY="-18 -11" id="uiSleeveModeToggleSideUp" onClick="onUiSleeveModeToggleSideUpClick"/>
+  </ToggleGroup>
+
+  <Text offsetXY="0 -66" height="20" width="3000">Card Back URL</Text>
+  <InputField
+    offsetXY="0 -86"
+    id="uiCardBackUrlInput"
+    onEndEdit="onUiCardBackUrlInputEndEdit"
+    fontSize="16"
+    placeholder="Enter image URL"
+    height="40"
+    width="340"
+    scale="0.4 0.4 0.4"
+  />
+
+</Panel>
