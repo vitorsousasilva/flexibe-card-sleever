@@ -1,0 +1,35 @@
+v1.1.0
+
+Features:
+- Introduce "to face!" buttons for applying images to card faces (instead of back)
+  - Make them small and red so they are secondary and marked as experimental
+
+Interface:
+- Update button colors from red to green for the main feature (sleeve image to card back)
+  - Red buttons now indicate extra/experimental functionalities
+- Swap Scryfall symbols for generic illustrations
+  - The Scryfall symbol was out of place and was just borrowed from the base table. It could denote that the mod fetches information from an external API, which is not the case. It just changes URLs without any external API usage.
+- Change "Card Front" to "Card Face" to reflect internal TTS terminology
+- Update tooltip
+  - Add version number to the title
+  - Add text indicating that red buttons are extra/experimental features
+  - Add workshop link
+
+Dev-only code:
+- Fix usage of wrong inequality operators (which for some reason was not crashing the code)
+- Improve error handling in mirror function with null checks
+- Fix method calls to properly use ":" instead of "." (even when not strictly needed)
+- Add author and links to script top comment
+- Add "write_to" parameter to sleeve functions for back/face selection
+- Standardize the usage of the word "face" for things related to this part of the card (instead of both "face" and "front") for consistency
+  - Code that deals with both parts of cards was renamed and/or refactored
+- Fix typo: "spawn_positon" -> "spawn_position"
+- Remove unused onLoad() trigger and code regarding custom cards
+- Add tooltips to main "Sleeve it!" buttons
+- Update XML defaults
+
+Dev-only misc:
+- Add custom token base image and cover image for workshop
+- Add .vscode to .gitignore
+- Create tooltip.txt to reflect the current tooltip of the asset
+- Add changelog.txt

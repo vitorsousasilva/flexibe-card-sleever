@@ -3,6 +3,7 @@
     navigation="None"
     color="#E9E8E7"
     resizeTextForBestFit="true"
+    resizeTextMinSize="0.1"
     resizeTextMaxSize="1000"
   />
   <Text
@@ -43,25 +44,38 @@
   />
   <Button
     navigation="None"
-    colors="#8c3131|#bf4343|#220000|rgba(0.78,0.78,0.78,0.5)"
-    textColor="#E9E8E7"
-    textOutline="#121212"
     textAlignment="MiddleCenter"
     resizeTextForBestFit="true"
+    resizeTextMinSize="0.1"
     resizeTextMaxSize="1000"
   />
   <!-- colors="#4d3131|#664141|#220000|rgba(0.78,0.78,0.78,0.5)" -->
   <!-- colors="#39314d|#4c4166|#220022|rgba(0.78,0.78,0.78,0.5)" -->
   <Button
     class="sleeve-it-btn"
+    colors="#318c31ff|#43bf43|#220000|rgba(0.78,0.78,0.78,0.5)"
+    textColor="#E9E8E7"
+    textOutline="#121212"
     height="55"
     width="75"
     scale="0.5 0.5 0.5"
   />
   <Button
     class="mirror-it-btn"
+    colors="#8c3131|#bf4343|#220000|rgba(0.78,0.78,0.78,0.5)"
+    textColor="#E9E8E7"
+    textOutline="#121212"
     height="60"
     width="60"
+    scale="0.5 0.5 0.5"
+  />
+  <Button
+    class="to-face-btn"
+    colors="#8c3131|#bf4343|#220000|rgba(0.78,0.78,0.78,0.5)"
+    textColor="#E9E8E7"
+    textOutline="#121212"
+    height="25"
+    width="30"
     scale="0.5 0.5 0.5"
   />
 </Defaults>
@@ -78,19 +92,22 @@
   <Text class="operator-txt" offsetXY="87 75">=</Text>
   <Text class="operator-txt" offsetXY="87 -75">=</Text>
 
-  <Button class="mirror-it-btn" offsetXY="-157 -90" onClick="onUiMirrorBackToFrontButtonClick">Copy each card back to its front</Button>
-  <Button class="mirror-it-btn" offsetXY="-127 -90" onClick="onUiMirrorFrontToBackButtonClick">Copy each card front to its back</Button>
+  <Button class="mirror-it-btn" offsetXY="-157 -90" onClick="onUiMirrorBackToFaceButtonClick">Copy each card back to its face</Button>
+  <Button class="mirror-it-btn" offsetXY="-127 -90" onClick="onUiMirrorFaceToBackButtonClick">Copy each card face to its back</Button>
 
-  <Button class="sleeve-it-btn" offsetXY="87 97" onClick="onUiSleeveCopyGoButtonClick">Sleeve it!</Button>
-  <Button class="sleeve-it-btn" offsetXY="87 -53" onClick="onUiSleeveUrlGoButtonClick">Sleeve it!</Button>
+  <Button class="to-face-btn" offsetXY="87 57" onClick="onUiSleeveCopyToFaceButtonClick">to face!</Button>
+  <Button class="to-face-btn" offsetXY="87 -93" onClick="onUiSleeveUrlToFaceButtonClick">to face!</Button>
+
+  <Button class="sleeve-it-btn" offsetXY="87 97" onClick="onUiSleeveCopyGoButtonClick" tooltip="Sleeve using another card!">Sleeve it!</Button>
+  <Button class="sleeve-it-btn" offsetXY="87 -53" onClick="onUiSleeveUrlGoButtonClick" tooltip="Sleeve using image URL!">Sleeve it!</Button>
 
   <Text offsetXY="-40 26" class="radio-txt">Use:</Text>
   <Text offsetXY="21 25" class="radio-txt">Card back</Text>
-  <Text offsetXY="20 7" class="radio-txt">Card front</Text>
+  <Text offsetXY="20 7" class="radio-txt">Card face</Text>
   <Text offsetXY="52.7 -11" class="radio-txt">Whichever side is up</Text>
   <ToggleGroup>
     <Toggle offsetXY="-18 25" id="uiSleeveModeToggleBack" onClick="onUiSleeveModeToggleBackClick" isOn="true"/>
-    <Toggle offsetXY="-18 7" id="uiSleeveModeToggleFront" onClick="onUiSleeveModeToggleFrontClick"/>
+    <Toggle offsetXY="-18 7" id="uiSleeveModeToggleFace" onClick="onUiSleeveModeToggleFaceClick"/>
     <Toggle offsetXY="-18 -11" id="uiSleeveModeToggleSideUp" onClick="onUiSleeveModeToggleSideUpClick"/>
   </ToggleGroup>
 
